@@ -1,0 +1,24 @@
+/* @font-face {
+  src: url("../fonts/ARIALMT.ttf");
+  font-family: aria;
+  font-weight: normal;
+  font-stretch: normal;
+  font-style: normal;
+  font-display: fallback;
+} */
+@font-face {
+  src: url("../fonts/Avenir-Heavy.ttf");
+  font-family: Avenir;
+  font-weight: 900;
+  font-stretch: normal;
+  font-style: normal;
+  font-display: fallback;
+}
+@font-face {
+  src: url("../fonts/ElleBaskerville.otf");
+  font-family: ElleBaskerville;
+  font-weight: normal;
+  font-stretch: normal;
+  font-style: normal;
+  font-display: fallback;
+}

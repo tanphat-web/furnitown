@@ -1,0 +1,8 @@
+/node_modules/
+/.sass-cache/
+/scss/
+debug.log
+gruntfile.js
+package-lock.json
+package.json
+yarn.lock
