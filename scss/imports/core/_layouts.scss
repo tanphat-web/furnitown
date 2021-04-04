@@ -1,0 +1,46 @@
+* {
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  font-smoothing: antialiased;
+  text-rendering: optimizeLegibility;
+  box-sizing: border-box;
+  appearance: none;
+  -moz-appearance: none;
+  -webkit-appearance: none;
+}
+html,
+body {
+  width: 100%;
+  max-width: $max-width;
+  -webkit-font-smoothing: antialiased;
+  margin: auto;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 12px;
+  background: $white-cl;
+  position: relative;
+  // @include custom-scrollbar();
+  .mainwrapper {
+    width: 100%;
+    margin: auto;
+  }
+  @include desktop {
+  }
+  @include tablet {
+  }
+  @include mobile {
+  }
+}
+html::-webkit-scrollbar {
+  width: 4px;
+}
+html::-webkit-scrollbar-thumb,
+body::-webkit-scrollbar-thumb {
+  background: $black-bg-cl;
+}
+html::-webkit-scrollbar-track,
+body::-webkit-scrollbar-track {
+  background: $black-bg-cl;
+}
+body.hidden {
+  overflow: hidden;
+}

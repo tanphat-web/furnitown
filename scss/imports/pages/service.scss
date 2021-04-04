@@ -1,0 +1,80 @@
+#service {
+	h3 {
+		font-family: $font-elle;
+		font-size: 26px;
+		line-height: 1.94;
+		letter-spacing: 2.6px;
+		color: #090909;
+		text-transform: uppercase;
+		display: inline-block;
+		padding: 35px 0 25px 0;
+		@include tablet {
+			padding: 25px 0 15px 0;
+		}
+		@include mobile {
+			padding: 20px 0 10px 0;
+		}
+	}
+	.services-banner {
+		&__wrap {
+			padding: 80px 0 0 0;
+
+			h2.title {
+				text-align: center;
+				font-size: 32px;
+				font-family: $font-elle;
+				line-height: 1.58;
+				letter-spacing: 3.2px;
+				color: #101010;
+				text-transform: uppercase;
+				margin-bottom: 20px;
+			}
+		}
+	}
+	.services-contact {
+		border-bottom: 1px solid $line2-cl;
+		padding: 0 0 70px 0;
+		@include tablet {
+			padding: 0 0 55px 0;
+		}
+		@include mobile {
+			padding: 0 0 40px 0;
+		}
+		&__content {
+			padding: 0 28px;
+			@include tablet {
+				padding: 20px 0;
+			}
+
+			p {
+				font-size: 12px;
+				line-height: 2.17;
+				letter-spacing: 1.2px;
+				color: #090909;
+				padding: 12px 0;
+			}
+		}
+	}
+	.services-work {
+		padding: 40px 0 80px 0;
+		@include tablet {
+			padding: 30px 0 70px 0;
+		}
+		@include mobile {
+			padding: 20px 0 50px 0;
+		}
+		&__wrap {
+			text-align: center;
+			p {
+				font-size: 12px;
+				line-height: 2.17;
+				letter-spacing: 1.2px;
+				color: #090909;
+				margin-bottom: 50px;
+				@include mobile {
+					margin-bottom: 30px;
+				}
+			}
+		}
+	}
+}

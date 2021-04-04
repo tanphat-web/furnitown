@@ -1,0 +1,215 @@
+.product-pages {
+	.banner-product {
+		height: 50vh;
+		background-repeat: no-repeat;
+		background-size: cover;
+		background-position: center center;
+		position: relative;
+		overflow: hidden;
+		display: flex;
+		justify-content: flex-end;
+		align-items: center;
+		.overlay {
+			background: rgba(0, 0, 0, 0.3);
+		}
+		.desc {
+			text-align: right;
+			position: relative;
+			z-index: 1;
+			p {
+				font-size: 24px;
+				font-family: $font-elle;
+				line-height: 2.1;
+				letter-spacing: 2px;
+				text-transform: uppercase;
+				opacity: 0.9;
+				color: $white-cl;
+			}
+			@include tablet {
+				p {
+					line-height: 1.9;
+					font-size: 20px;
+					text-align: center;
+				}
+			}
+			@include mobile {
+				p {
+					line-height: 1.9;
+					font-size: 18px;
+				}
+			}
+			@include mobile-xxs {
+				p {
+					line-height: 1.7;
+					font-size: 16px;
+				}
+			}
+		}
+	}
+	.product {
+		&-wrap {
+			&__content {
+				border-bottom: 2px solid $line2-cl;
+				.align-center {
+					align-items: center;
+				}
+				.product-text {
+					display: flex;
+					align-items: center;
+					.number {
+						font-family: $font-elle;
+						color: $yellow-dark-cl;
+						font-size: 90px;
+						line-height: 1.51;
+						letter-spacing: -2.25px;
+						padding-right: 27px;
+					}
+					.text {
+						h2 {
+							font-family: $font-elle;
+							color: $black-4-cl;
+							font-size: 18px;
+							line-height: 2.22;
+							text-transform: uppercase;
+						}
+						p {
+							font-size: 12px;
+							line-height: 1.67;
+							color: $black-cl;
+						}
+					}
+				}
+				.product-all {
+					display: flex;
+					align-items: baseline;
+					justify-content: flex-end;
+					@include mobile {
+						margin: 0 0 30px 0;
+					}
+					&:hover {
+						svg {
+							right: -50px;
+						}
+						p {
+							right: 40px;
+						}
+					}
+					svg {
+						width: 20px;
+						position: relative;
+						transition: $t;
+						right: 0;
+					}
+					p {
+						font-size: 12px;
+						font-weight: bold;
+						text-transform: uppercase;
+						color: $black-4-cl;
+						padding-left: 10px;
+						transition: $t;
+						position: relative;
+						right: 0;
+					}
+				}
+				.product-items {
+					position: relative;
+					&::before,
+					&::after {
+						content: "";
+						position: absolute;
+						height: 85%;
+						width: 1px;
+						background: #d7d7d7;
+						top: 0;
+						@include desktop {
+							display: none;
+						}
+					}
+					&::before {
+						left: calc(100% / 3);
+					}
+					&::after {
+						right: calc(100% / 3);
+					}
+					.item {
+						.img {
+							overflow: hidden;
+							cursor: pointer;
+							&:hover {
+								img {
+									transition: 0.6s;
+									transform: scale(1.3);
+								}
+							}
+							img {
+								transition: 0.6s;
+							}
+						}
+						.text {
+							padding: 20px 0;
+							@include mobile {
+								padding: 15px 0;
+							}
+							h3.title {
+								font-size: 18px;
+								line-height: 2.22;
+								letter-spacing: -0.45px;
+								color: $black-4-cl;
+								margin-bottom: 15px;
+								@include mobile {
+									margin: 10px 0;
+								}
+							}
+							.price {
+								font-size: 12;
+								letter-spacing: 1.2px;
+								color: $black-4-cl;
+								text-transform: uppercase;
+							}
+							.detail {
+								display: inline-block;
+								margin: 30px 0;
+								@include mobile {
+									margin: 20px 0;
+								}
+								a {
+									display: flex;
+									align-items: baseline;
+									&:hover {
+										svg {
+											right: -60px;
+										}
+										p {
+											right: 30px;
+										}
+									}
+									svg {
+										width: 20px;
+										position: relative;
+										transition: $t;
+										right: 0;
+									}
+									p {
+										font-size: 12px;
+										font-weight: bold;
+										text-transform: uppercase;
+										color: $black-4-cl;
+										padding-left: 10px;
+										transition: $t;
+										position: relative;
+										right: 0;
+									}
+								}
+							}
+						}
+					}
+				}
+			}
+		}
+	}
+}
+.wrapper {
+	&.product {
+		background: #f3f3f3;
+	}
+}

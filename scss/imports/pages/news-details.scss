@@ -1,0 +1,132 @@
+#news-details {
+	.breadcrumb {
+		position: relative;
+		z-index: 120;
+		padding: 44px 0 50px 0;
+		@include desktop {
+			display: none;
+		}
+		a {
+			display: flex;
+			align-items: center;
+			justify-content: flex-end;
+			span {
+				font-family: $font-Avenir;
+				font-size: 11px;
+				font-weight: 900;
+				line-height: 2.73;
+				color: #0f0f0f;
+				text-transform: uppercase;
+				margin-right: 10px;
+			}
+			svg {
+				width: 22px;
+				transform: rotate(180deg);
+			}
+		}
+	}
+	.banner {
+		padding: 70px 0;
+		@include desktop {
+			padding: 120px 0 70px 0;
+		}
+		@include mobile {
+			padding: 100px 0 40px 0;
+		}
+	}
+	.description {
+		&-wrap {
+			padding: 0 0 70px 0;
+			width: 70%;
+			@include tablet {
+				width: 100%;
+			}
+			h2 {
+				font-family: $font-elle;
+				font-size: 20px;
+				line-height: 1.6;
+				letter-spacing: 2px;
+				color: #212121;
+				text-transform: uppercase;
+				margin-bottom: 30px;
+				@include tablet {
+					margin-bottom: 25px;
+					font-size: 17px;
+				}
+				@include mobile {
+					margin-bottom: 20px;
+					font-size: 15px;
+				}
+			}
+			p {
+				font-size: 12px;
+				font-weight: bold;
+				line-height: 1.83;
+				letter-spacing: 1.2px;
+				color: #212121;
+				text-transform: uppercase;
+				margin-bottom: 27px;
+				@include tablet {
+					margin-bottom: 20px;
+				}
+				@include mobile {
+					margin-bottom: 15px;
+					font-size: 11px;
+				}
+			}
+			span {
+				width: 90%;
+				@include tablet {
+					width: 100%;
+				}
+				font-size: 12px;
+				line-height: 1.83;
+				letter-spacing: 1.2px;
+				color: #212121;
+				display: block;
+				&.date {
+					font-style: italic;
+					margin-bottom: 30px;
+					@include tablet {
+						margin-bottom: 20px;
+					}
+					@include mobile {
+						margin-bottom: 15px;
+					}
+				}
+			}
+		}
+	}
+	.more-post {
+		padding: 50px 0;
+		@include mobile {
+			padding: 30px 0 50px 0;
+		}
+		&__line {
+			display: flex;
+			justify-content: space-between;
+			align-items: center;
+			padding: 0 0 50px 0;
+			.line {
+				display: block;
+				background: $black-cl;
+				max-width: 40%;
+				flex-basis: 40%;
+				height: 2px;
+				@include mobile {
+					max-width: 30%;
+					flex-basis: 30%;
+				}
+			}
+			p {
+				font-size: 11px;
+				font-weight: bold;
+				line-height: 2;
+				letter-spacing: 1.1px;
+				color: #212121;
+				text-transform: uppercase;
+				text-align: center;
+			}
+		}
+	}
+}

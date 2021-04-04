@@ -1,0 +1,221 @@
+#project {
+	.projects {
+		.project-wrap {
+			.project-menu {
+				padding: 80px 0 50px 0;
+				border-bottom: 1px solid $black-cl;
+				h3 {
+					font-family: $font-elle;
+					font-size: 26px;
+					line-height: 1.94;
+					letter-spacing: 2.6px;
+					color: #090909;
+					text-transform: uppercase;
+					display: inline-block;
+					padding: 35px 0 25px 0;
+					@include tablet {
+						padding: 25px 0 15px 0;
+					}
+					@include mobile {
+						padding: 20px 0 10px 0;
+					}
+				}
+				p {
+					font-size: 12px;
+					line-height: 2.17;
+					letter-spacing: 1.2px;
+					color: #090909;
+				}
+				.align-items-center {
+					align-items: center;
+				}
+				.project-select {
+					@include desktop {
+						padding-top: 30px;
+						@include mobile {
+							padding-top: 15px;
+						}
+					}
+					.select {
+						width: 200px;
+						display: inline-block;
+						color: $white-cl;
+						background-color: $black-cl;
+						font-size: 11px;
+						font-weight: bold;
+						text-transform: uppercase;
+						position: relative;
+						cursor: pointer;
+						span {
+							padding: 11px 23px 11px 41px;
+							width: 100%;
+							display: block;
+						}
+						ul {
+							background: green;
+							position: absolute;
+							top: 100%;
+							left: 0;
+							width: 100%;
+							display: none;
+							z-index: 30;
+							&.active {
+								display: block;
+							}
+							li {
+								padding: 20px 41px;
+								border-bottom: 1px solid $black-cl;
+								transition: $t;
+								&:hover {
+									background: #705b32;
+								}
+							}
+						}
+					}
+				}
+			}
+			.projects-list {
+				margin: 50px 0;
+				position: relative;
+				.col-lg-4 {
+					@include mobile {
+						padding: 0;
+					}
+				}
+				&::after,
+				&::before {
+					content: "";
+					position: absolute;
+					height: 97.2%;
+					width: 1px;
+					background: #d7d7d7;
+					top: 0;
+					@include desktop {
+						display: none;
+					}
+				}
+				&::before {
+					left: calc(100% / 3);
+				}
+				&::after {
+					right: calc(100% / 3);
+				}
+				&__items {
+					margin-bottom: 30px;
+
+					@include tablet {
+						margin-bottom: 20px;
+					}
+					&:hover {
+						.text {
+							background: #6d5019;
+							h3 {
+								color: $white-cl;
+							}
+							p {
+								color: $white-cl;
+							}
+							.details {
+								span {
+									color: $white-cl;
+								}
+								svg {
+									polygon {
+										fill: $white-cl;
+									}
+								}
+							}
+						}
+					}
+					.img {
+						overflow: hidden;
+						img {
+							transition: 0.6s ease-in-out;
+						}
+						&:hover {
+							img {
+								transform: scale(1.3);
+								transition: 0.6s ease-in-out;
+							}
+						}
+					}
+					.text {
+						padding: 0 15px;
+						transition: $t;
+
+						.info {
+							padding: 30px 0;
+							font-size: 12px;
+							line-height: 1.67;
+							letter-spacing: -0.3px;
+							color: $black-4-cl;
+							h3 {
+								font-weight: bold;
+								text-transform: uppercase;
+								margin-bottom: 20px;
+								@include mobile {
+									margin-bottom: 13px;
+								}
+							}
+						}
+						.details {
+							display: flex;
+							align-items: center;
+							svg {
+								width: 20px;
+								transform: translateY(-1px);
+							}
+							span {
+								font-size: 11px;
+								font-weight: bold;
+								line-height: 3.64;
+								letter-spacing: normal;
+								color: $black-4-cl;
+								text-transform: uppercase;
+								margin-left: 7px;
+							}
+						}
+					}
+				}
+			}
+		}
+	}
+}
+.pages-number {
+	padding: 0 0 80px 0;
+	@include tablet {
+		padding: 0 0 60px 0;
+	}
+	@include mobile {
+		padding: 0 0 40px 0;
+	}
+	&__items {
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		span {
+			width: 33px;
+			height: 33px;
+			text-align: center;
+			line-height: 33px;
+			transition: $t;
+			display: block;
+			border: solid 1px transparent;
+			background-color: transparent;
+			cursor: pointer;
+			margin: 0 7px;
+			font-size: 12px;
+			color: #232323;
+			&.active {
+				border: solid 1px #585958;
+				background-color: #ebebeb;
+			}
+			&:hover {
+				border: solid 1px #585958;
+				background-color: #ebebeb;
+			}
+		}
+	}
+}
+.projects-list {
+}
